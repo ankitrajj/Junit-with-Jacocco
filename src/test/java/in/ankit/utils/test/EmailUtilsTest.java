@@ -1,4 +1,4 @@
-package in.ashokit.utils.test;
+package in.ankit.utils.test;
 
 import static org.mockito.Mockito.doNothing;
 
@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.mail.javamail.JavaMailSender;
 
-import in.ashokit.util.EmailUtils;
+import in.ankit.util.EmailUtils;
 
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
