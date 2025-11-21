@@ -1,4 +1,4 @@
-package in.ashokit;
+package in.ankit;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
