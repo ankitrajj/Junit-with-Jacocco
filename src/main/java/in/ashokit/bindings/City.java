@@ -1,4 +1,4 @@
-package in.ashokit.bindings;
+package in.ankit.bindings;
 
 import lombok.Data;
 
