@@ -1,4 +1,4 @@
-package in.ashokit.service.test;
+package in.ankit.service.test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -11,14 +11,14 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import in.ashokit.entities.UserEntity;
-import in.ashokit.props.AppProperties;
-import in.ashokit.repositories.CityRepository;
-import in.ashokit.repositories.CountryRepository;
-import in.ashokit.repositories.StateRepository;
-import in.ashokit.repositories.UserRepository;
-import in.ashokit.service.RegistrationServiceImpl;
-import in.ashokit.util.EmailUtils;
+import in.ankit.entities.UserEntity;
+import in.ankit.props.AppProperties;
+import in.ankit.repositories.CityRepository;
+import in.ankit.repositories.CountryRepository;
+import in.ankit.repositories.StateRepository;
+import in.ankit.repositories.UserRepository;
+import in.ankit.service.RegistrationServiceImpl;
+import in.ankit.util.EmailUtils;
 
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
@@ -47,15 +47,15 @@ public class RegistrationServiceImplTest {
 
 	@Test
 	public void uniqueEmailTest1() {
-		when(userRepo.findByUserEmail("ashok@gmail.com")).thenReturn(new UserEntity());
-		boolean uniqueEmail = service.uniqueEmail("ashok@gmail.com");
+		when(userRepo.findByUserEmail("ankitrajj95@gmail.com")).thenReturn(new UserEntity());
+		boolean uniqueEmail = service.uniqueEmail("ankitrajj95@gmail.com");
 		assertFalse(uniqueEmail);
 	}
 	
 	@Test
 	public void uniqueEmailTest2() {
-		when(userRepo.findByUserEmail("ashok@gmail.com")).thenReturn(null);
-		boolean uniqueEmail = service.uniqueEmail("ashok@gmail.com");
+		when(userRepo.findByUserEmail("ankitrajj95@gmail.com")).thenReturn(null);
+		boolean uniqueEmail = service.uniqueEmail("ankitrajj95@gmail.com");
 		assertTrue(uniqueEmail);
 	}
 
