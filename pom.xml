@@ -72,12 +72,12 @@
 				<version>0.8.2</version>
 				<configuration>
 					<excludes>
-						<exclude>in/ashokit/entities/**</exclude>
-						<exclude>in/ashokit/bindings/**</exclude>
-						<exclude>in/ashokit/constants/**</exclude>
-						<exclude>in/ashokit/props/**</exclude>
-						<exclude>in/ashokit/exception/**</exclude>
-						<exclude>in/ashokit/config/**</exclude>
+						<exclude>in/ankit/entities/**</exclude>
+						<exclude>in/ankit/bindings/**</exclude>
+						<exclude>in/ankit/constants/**</exclude>
+						<exclude>in/ankit/props/**</exclude>
+						<exclude>in/ankit/exception/**</exclude>
+						<exclude>in/ankit/config/**</exclude>
 					</excludes>
 				</configuration>
 				<executions>
