@@ -1,4 +1,4 @@
-package in.ashokit.rest.test;
+package in.ankit.rest.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
@@ -17,10 +17,10 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import in.ashokit.bindings.User;
-import in.ashokit.constants.AppConstants;
-import in.ashokit.rest.RegistrationRestController;
-import in.ashokit.service.RegistrationService;
+import in.ankit.bindings.User;
+import in.ankit.constants.AppConstants;
+import in.ankit.rest.RegistrationRestController;
+import in.ankit.service.RegistrationService;
 
 @WebMvcTest(value = RegistrationRestController.class)
 public class RegistrationRestControllerTest {
@@ -35,7 +35,7 @@ public class RegistrationRestControllerTest {
 	public void emailCheckTest1() throws Exception {
 		when(regService.uniqueEmail("ashok@gmail.com")).thenReturn(true);
 
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/emailcheck/ashok@gmail.com");
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/emailcheck/ankitrajj95@gmail.com");
 
 		MvcResult mvcResult = mockMvc.perform(builder).andReturn();
 		MockHttpServletResponse response = mvcResult.getResponse();
@@ -45,9 +45,9 @@ public class RegistrationRestControllerTest {
 
 	@Test
 	public void emailCheckTest2() throws Exception {
-		when(regService.uniqueEmail("abc@gmail.com")).thenReturn(false);
+		when(regService.uniqueEmail("ankitrajj95@gmail.com")).thenReturn(false);
 
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/emailcheck/abc@gmail.com");
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/emailcheck/ankitrajj95@gmail.com");
 
 		MvcResult mvcResult = mockMvc.perform(builder).andReturn();
 		MockHttpServletResponse response = mvcResult.getResponse();
@@ -91,8 +91,8 @@ public class RegistrationRestControllerTest {
 	public void citiesTest() throws Exception {
 
 		HashMap<Integer, String> map = new HashMap<>();
-		map.put(1, "Guntur");
-		map.put(2, "Ongole");
+		map.put(1, "Delhi");
+		map.put(2, "Buxar");
 		when(regService.getCities(1)).thenReturn(map);
 
 		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/cities/1");
@@ -106,9 +106,9 @@ public class RegistrationRestControllerTest {
 	@Test
 	public void saveUserTest1() throws Exception {
 		User user = new User();
-		user.setUserFname("ashok");
-		user.setUserLname("IT");
-		user.setUserEmail("ashokit@gmail.com");
+		user.setUserFname("ankit");
+		user.setUserLname("raj");
+		user.setUserEmail("ankitrajj95@gmail.com");
 		// set remaining fields also
 
 		when(regService.registerUser(user)).thenReturn(true);
@@ -128,9 +128,9 @@ public class RegistrationRestControllerTest {
 	@Test
 	public void saveUserTest2() throws Exception {
 		User user = new User();
-		user.setUserFname("ashok");
-		user.setUserLname("IT");
-		user.setUserEmail("ashokit@gmail.com");
+		user.setUserFname("ankit");
+		user.setUserLname("raj");
+		user.setUserEmail("ankitrajj95@gmail.com");
 		// set remaining fields also
 
 		when(regService.registerUser(user)).thenReturn(false);
